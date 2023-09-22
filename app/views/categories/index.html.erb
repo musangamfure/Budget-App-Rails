@@ -1,0 +1,31 @@
+<%= render partial: 'shared/header', locals: { heading: 'CATEGORIES', path: categories_path } %>
+<div class="d-flex flex-column justify-content-between">
+  <div>
+    <% @categories.each do |category| %>
+      <ul class="mr-2">
+        <li class="card">
+          <%= link_to category_path(category), class: "flex-row" do %>
+            <div class="image">
+              <% if category.icon.attached? %>
+                <%= image_tag(category.icon) %>
+              <% else %>
+                <%= image_tag('group.png') %>
+              <% end %>
+            </div>
+            <div class="info">
+              <div class="name-amount">
+                <h3><%= category.name %></h3>
+                <h3>$<%= category.bills.sum(:amount) %></h3>
+              </div>
+            </div>
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+  <div class="btn-area">
+    <%= link_to new_category_path, class: "btn group-btn" do %>
+      Add new category
+    <% end %>
+  </div>
+</div>
