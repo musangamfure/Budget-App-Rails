@@ -40,9 +40,8 @@ RSpec.describe 'Log in page', type: :system do
     end
 
     it 'click on SIGNUP button' do
-
       link = find('a', text: 'Sign up', match: :first)
-   
+
       link.click
       sleep(1)
       expect(page).to have_current_path new_user_registration_path

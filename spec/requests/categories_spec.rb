@@ -63,7 +63,5 @@ RSpec.describe 'Categories page', type: :system do
       expect(page).to have_content(@bill.created_at.strftime('%d-%m-%Y'))
       expect(page).to have_content(@bill.amount)
     end
-
-    
   end
 end

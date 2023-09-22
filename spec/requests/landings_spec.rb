@@ -29,4 +29,3 @@ RSpec.describe 'Landings Page', type: :system do
     end
   end
 end
-
