@@ -40,9 +40,9 @@ RSpec.describe 'Log in page', type: :system do
     end
 
     it 'click on SIGNUP button' do
-      # Find the link using a CSS selector that targets both the link text and the icon
+
       link = find('a', text: 'Sign up', match: :first)
-      # Click on the link
+   
       link.click
       sleep(1)
       expect(page).to have_current_path new_user_registration_path
