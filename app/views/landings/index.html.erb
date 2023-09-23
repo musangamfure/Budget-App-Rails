@@ -1,10 +1,10 @@
-<section class="splash-screen">
-  <div class="welcome">
-    <h1>Budget App</h1>
+<section class="landings-page">
+  <div class="welcome-msg">
+    <h1>Budget App </h1>
   </div>
-  <%= render partial: "shared/flashs" %>
-  <div class="splash-btns">
-    <%= link_to new_user_session_path do %><button class="btn splash-login">LOG IN</button><% end %>
-    <%= link_to new_user_registration_path do %><button class="btn splash-signup">SIGN UP</button><% end %>
+  <%= render partial: "shared/notice" %>
+  <div class="landings-btns">
+    <%= link_to new_user_session_path do %><button class="btn landings-login">LOG IN</button><% end %>
+    <%= link_to new_user_registration_path do %><button class="btn landings-signup">SIGN UP</button><% end %>
   </div>
 </section>
