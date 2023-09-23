@@ -65,7 +65,7 @@ _Budget-app_ is a mobile web application designed for efficient budget managemen
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://budgetify-xp7b.onrender.com/)
+- [Live Demo Link](https://budgetapp-mu8y.onrender.com/)
 
 - [Presentation Loom Video](https://www.loom.com/share/66c8a10a109f48fa96cf74a2b6ff88a5?sid=e7208321-c4dd-4484-b23b-451e836ba801)
 
