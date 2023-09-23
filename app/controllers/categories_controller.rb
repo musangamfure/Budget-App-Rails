@@ -1,8 +1,9 @@
 class CategoriesController < ApplicationController
   before_action :set_user
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @categories = @user.categories.all
+    @categories = @user.categories.includes(:bills)
   end
 
   def new
@@ -10,8 +11,8 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(category_params)
-    @category.user = @user
+    @category = @user.categories.build(category_params)
+    
     if @category.save
       redirect_to categories_path, notice: 'Category added successfully'
     else
@@ -22,7 +23,12 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    redirect_to categories_path, notice: 'You are not authorized to access this page!' unless @category.user == @user
+    
+    unless @category.user == @user
+      redirect_to categories_path, notice: 'You are not authorized to access this page!'
+      return
+    end
+
     @bills = @category.bills.order(created_at: :desc)
     @total = @bills.sum(:amount)
   end
@@ -30,10 +36,11 @@ class CategoriesController < ApplicationController
   private
 
   def set_user
-    @user = current_user
+    @user = current_user || User.new
   end
 
   def category_params
     params.require(:category).permit(:name, :icon)
   end
 end
+
