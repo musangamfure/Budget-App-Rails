@@ -12,19 +12,20 @@
                 <%= image_tag('group.png') %>
               <% end %>
             </div>
-            <div class="info">
-              <div class="name-amount">
+            <div class="group-container">
+              <div class="group-info">
                 <h3><%= category.name %></h3>
                 <h3>$<%= category.bills.sum(:amount) %></h3>
               </div>
+              <p><%= category.created_at.strftime("%d-%m-%Y") %></p>
             </div>
           <% end %>
         </li>
       </ul>
     <% end %>
   </div>
-  <div class="btn-area">
-    <%= link_to new_category_path, class: "btn group-btn" do %>
+  <div class="btn-action">
+    <%= link_to new_category_path, class: "btn green-btn" do %>
       Add new category
     <% end %>
   </div>

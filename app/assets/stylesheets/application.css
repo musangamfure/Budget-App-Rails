@@ -14,17 +14,17 @@
  *= require_self
  */
 
-@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --color-primary: #3778c2;
-  --color-secondary: #5fb523;
-  --color-dark: #434b54;
-  --text-color: #262729;
+  --color-primary: #3374be;
+  --color-secondary: #58a91d;
+  --color-dark: #3f474f;
+  --text-color: #242527;
   --links-color: #e8eae9;
   --background-color: #f1f3f2;
-  --grey: #c7ccca;
-  --main-font: 'Proxima Nova', sans-serif;
+  --grey: #bbc1bf;
+  --main-font: 'Poppins', sans-serif;
 }
 
 * {
@@ -64,7 +64,7 @@ ul {
 }
 
 .p-10 {
-  padding: 10px;
+  padding: 12px;
 }
 
 .flex-row {
@@ -77,28 +77,28 @@ img {
   height: 50px;
 }
 
-.bill-container {
+.bill {
   margin-top: 10px;
 }
 
-.name-amount {
+.group-info {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.name-amount h3 {
-  font-size: 1rem;
+.group-info h3 {
+  font-size: 1.3rem;
 }
 
-.info {
+.group-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
 }
 
-.info p {
+.group-container p {
   font-size: 0.75rem;
 }
 
@@ -108,6 +108,10 @@ img {
   cursor: pointer;
   width: 100%;
   border: 1px solid transparent;
+}
+
+.btn-danger {
+  margin-top: 3px;
 }
 
 .flash {
@@ -155,12 +159,12 @@ img {
   height: 15px;
 }
 
-.splash-screen {
+.landings-page {
   display: flex;
   flex-direction: column;
 }
 
-.welcome {
+.welcome-msg {
   width: 100%;
   height: 80vh;
   display: flex;
@@ -168,12 +172,15 @@ img {
   align-items: center;
 }
 
-.welcome h1 {
-  font-size: 1.8rem;
-  font-style: italic;
+.welcome-msg h1 {
+  font-size: 2rem;
 }
 
-.splash-btns {
+.welcome-msg h2 {
+  font-size: 1.8rem;
+}
+
+.landings-btns {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -183,20 +190,20 @@ img {
   width: 100%;
 }
 
-.splash-login,
-.splash-login:hover {
+.landings-login,
+.landings-login:hover {
   background-color: var(--color-primary);
   color: white;
 }
 
-.splash-signup {
+.landings-signup {
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
 }
 
 .form {
-  margin-top: 10px;
   color: var(--color-dark);
+  margin: 5px;
 }
 
 .form-field {
@@ -206,8 +213,9 @@ img {
   outline: none;
   border: none;
   border-bottom: 1px solid var(--background-color);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
+  margin: 5px 0;
 }
 
 .form-field::placeholder {
@@ -215,7 +223,7 @@ img {
   letter-spacing: 0.6px;
 }
 
-.checkbox-btn {
+.checkbox {
   margin: 20px 10px;
   display: flex;
   flex-direction: column;
@@ -232,24 +240,32 @@ img {
   color: var(--color-dark);
 }
 
-.btn-area,
-.btn-area:hover {
+.btn-action,
+.btn-action:hover {
   background-color: var(--color-secondary);
-  padding: 10px 10px;
+  padding: 12px;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
 
-.group-btn,
-.group-btn:hover {
+.green-btn,
+.green-btn:hover {
   border-radius: 10px;
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
 }
 
-.checkboxes {
+.checkbox-btn {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin-top: 5px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 15px;
 }
