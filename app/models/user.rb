@@ -8,6 +8,5 @@ class User < ApplicationRecord
   has_many :bills, class_name: 'Bill', dependent: :destroy, foreign_key: 'user_id'
 
   validates :name, presence: true
-  validates :email, presence: true, uniqueness: true 
+  validates :email, presence: true, uniqueness: true
 end
-
