@@ -6,4 +6,7 @@ class Category < ApplicationRecord
   has_one_attached :icon
 
   validates :name, presence: true
+  validates :icon, presence: true 
+  validates :user_id, presence: true 
 end
+
