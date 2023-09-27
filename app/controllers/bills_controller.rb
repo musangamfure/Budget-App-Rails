@@ -17,7 +17,7 @@ class BillsController < ApplicationController
     @bill = Bill.new(bill_params)
     @bill.user = current_user
 
-    if @bill.add
+    if @bill.save
       flash[:notice] = 'Bill created successfully'
       @redirect_category = Category.find(bill_params[:category_ids].at(1))
       redirect_to @redirect_category
