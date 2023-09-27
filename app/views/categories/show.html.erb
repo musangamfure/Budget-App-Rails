@@ -1,6 +1,6 @@
 <%= render partial: 'shared/header', locals: { heading: 'TRANSACTIONS', path: category_path(@category) } %>
 <div class="card">
-  <div class="group-info p-10">
+  <div class="category-info p-10">
     <h3><%= @category.name %></h3>
     <h3>$<%= @bills.sum(:amount) %></h3>
   </div>
@@ -16,8 +16,8 @@
             <%= image_tag('group.png') %>
           <% end %>
         </div>
-        <div class="group-container">
-          <div class="group-info">
+        <div class="category-container">
+          <div class="category-info">
             <h3><%= bill.name %></h3>
             <h3>$<%= bill.amount %></h3>
           </div>
