@@ -39,14 +39,12 @@ class CategoriesController < ApplicationController
   end
 
   def ensure_category_owner
-    unless user_signed_in? && @category.user == current_user
-      redirect_to categories_path, notice: 'You are not authorized to access this page!'
-    end
+    return if user_signed_in? && @category.user == current_user
+
+    redirect_to categories_path, notice: 'You are not authorized to access this page!'
   end
 
   def set_user
     @user = current_user
   end
 end
-
-
