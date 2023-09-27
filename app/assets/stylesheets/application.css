@@ -13,18 +13,17 @@
  *= require_tree .
  *= require_self
  */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-  --color-primary: #3374be;
-  --color-secondary: #58a91d;
-  --color-dark: #3f474f;
-  --text-color: #242527;
+  --primary-color: #3374be;
+  --secondary-color: #4f9f15;
+  --black-color: #3d4348;
+  --text-color: #202123;
   --links-color: #e8eae9;
-  --background-color: #f1f3f2;
-  --grey: #bbc1bf;
-  --main-font: 'Poppins', sans-serif;
+  --bg-color: #e7ecea;
+  --grey-color: #b4bab8;
+  --main-font: 'Roboto', sans-serif;
 }
 
 * {
@@ -35,13 +34,13 @@
 
 body {
   font-family: var(--main-font);
-  color: var(--color-dark);
-  background-color: var(--background-color);
+  color: var(--black-color);
+  background-color: var(--bg-color);
 }
 
 a {
   text-decoration: none;
-  color: var(--color-dark);
+  color: var(--black-color);
 }
 
 .content-container {
@@ -60,7 +59,7 @@ ul {
 .card {
   background-color: white;
   padding: 5px;
-  box-shadow: 1px 1px 5px 0 var(--grey);
+  box-shadow: 1px 1px 5px 0 var(--grey-color);
 }
 
 .p-10 {
@@ -81,24 +80,24 @@ img {
   margin-top: 10px;
 }
 
-.group-info {
+.category-info {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.group-info h3 {
+.category-info h3 {
   font-size: 1.3rem;
 }
 
-.group-container {
+.category-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
 }
 
-.group-container p {
+.category-container p {
   font-size: 0.75rem;
 }
 
@@ -140,7 +139,7 @@ img {
 
 .header {
   padding: 10px;
-  background-color: var(--color-primary);
+  background-color: var(--primary-color);
   color: white;
   display: flex;
   align-items: center;
@@ -192,17 +191,17 @@ img {
 
 .landings-login,
 .landings-login:hover {
-  background-color: var(--color-primary);
+  background-color: var(--primary-color);
   color: white;
 }
 
 .landings-signup {
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .form {
-  color: var(--color-dark);
+  color: var(--black-color);
   margin: 5px;
 }
 
@@ -212,14 +211,14 @@ img {
   padding: 10px;
   outline: none;
   border: none;
-  border-bottom: 1px solid var(--background-color);
+  border-bottom: 1px solid var(--bg-color);
   font-size: 1rem;
   font-weight: 400;
   margin: 5px 0;
 }
 
 .form-field::placeholder {
-  color: var(--grey);
+  color: var(--grey-color);
   letter-spacing: 0.6px;
 }
 
@@ -237,20 +236,20 @@ img {
 }
 
 .form-links a {
-  color: var(--color-dark);
+  color: var(--black-color);
 }
 
 .btn-action,
 .btn-action:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--secondary-color);
   padding: 12px;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
 
-.green-btn,
-.green-btn:hover {
+.big-btn,
+.big-btn:hover {
   border-radius: 10px;
   border: 1px solid white;
   color: white;
@@ -266,6 +265,6 @@ img {
 .icon-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin-top: 15px;
+  gap: 25px;
+  margin-top: 20px;
 }
