@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
   def create
     @category = @user.categories.build(category_params)
 
-    if @category.save
+    if @category.add
       redirect_to categories_path, notice: 'Category added successfully'
     else
       flash.now[:alert] = @category.errors.full_messages.first if @category.errors.any?
