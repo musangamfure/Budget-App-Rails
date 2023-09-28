@@ -67,7 +67,7 @@ _Budget-app_ is a mobile web application designed for efficient budget managemen
 
 - [Live Demo Link](https://budgetapp-mu8y.onrender.com/)
 
-- [Presentation Loom Video](https://www.loom.com/share/1b4f1ef209e94528bf73a1cf2ccb182c?sid=d3588348-3e8c-48ba-8ccf-3057649bc7af)
+- [Presentation Loom Video](https://www.loom.com/share/e18fd37bc0ce4ceeaa0525d550396754?sid=a2770bd9-6ace-4895-b34c-f334d91292a4)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
