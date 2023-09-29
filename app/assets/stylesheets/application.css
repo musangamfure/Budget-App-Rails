@@ -1,0 +1,270 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --primary-color: #3374be;
+  --secondary-color: #4f9f15;
+  --black-color: #3d4348;
+  --text-color: #202123;
+  --links-color: #e8eae9;
+  --bg-color: #e7ecea;
+  --grey-color: #b4bab8;
+  --main-font: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--black-color);
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0 10px;
+}
+
+.card {
+  background-color: white;
+  padding: 5px;
+  box-shadow: 1px 1px 5px 0 var(--grey-color);
+}
+
+.p-10 {
+  padding: 12px;
+}
+
+.flex-row {
+  display: flex;
+  gap: 10px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.bill {
+  margin-top: 10px;
+}
+
+.category-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-info h3 {
+  font-size: 1.3rem;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.category-container p {
+  font-size: 0.75rem;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid transparent;
+}
+
+.btn-danger {
+  margin-top: 3px;
+}
+
+.flash {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+.flash-success {
+  border: 1px solid green;
+  background: #90ee90;
+}
+
+.flash-error {
+  border: 1px solid red;
+  background-color: #ffc6c4;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.header {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.back {
+  width: 13px;
+  height: 15px;
+}
+
+.landings-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-msg {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wlc-msg h1 {
+  font-size: 2rem;
+}
+
+.wlc-msg h2 {
+  font-size: 1.8rem;
+}
+
+.landings-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.landings-login,
+.landings-login:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.landings-signup {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.form {
+  color: var(--black-color);
+  margin: 5px;
+}
+
+.input-field {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--bg-color);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 5px 0;
+}
+
+.input-field::placeholder {
+  color: var(--grey-color);
+  letter-spacing: 0.6px;
+}
+
+.check-container {
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-links {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-links a {
+  color: var(--black-color);
+}
+
+.act-btn,
+.act-btn:hover {
+  background-color: var(--secondary-color);
+  padding: 12px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.big-btn,
+.big-btn:hover {
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+}
+
+.check-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 4px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}

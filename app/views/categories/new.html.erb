@@ -1,0 +1,8 @@
+<%= render partial: 'shared/header', locals: { heading: 'ADD NEW CATEGORY', path: new_category_path } %>
+<%= form_with model: @category, url: categories_path, local: true, class: 'form' do |f| %>
+  <%= f.text_field :name, autofocus: true, autocomplete: "off", placeholder: "Category Name", class: "input-field" %>
+  <div class="icon">
+    <%= f.file_field :icon %>
+    <%= f.submit "Add Category", class: "btn landings-login" %>
+  </div>
+<% end %>

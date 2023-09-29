@@ -1,0 +1,34 @@
+<%= render partial: 'shared/header', locals: { heading: 'TRANSACTIONS', path: category_path(@category) } %>
+<div class="card">
+  <div class="category-info p-10">
+    <h3><%= @category.name %></h3>
+    <h3>$<%= @bills.sum(:amount) %></h3>
+  </div>
+</div>
+<div class="bill">
+  <% @bills.each do |bill| %>
+    <ul>
+      <li class="flex-row card">
+        <div class="image">
+          <% if @category.icon.attached? %>
+            <%= image_tag(@category.icon) %>
+          <% else %>
+            <%= image_tag('group.png') %>
+          <% end %>
+        </div>
+        <div class="category-container">
+          <div class="category-info">
+            <h3><%= bill.name %></h3>
+            <h3>$<%= bill.amount %></h3>
+          </div>
+          <p><%= bill.created_at.strftime("%d-%m-%Y") %></p>
+        </div>
+      </li>
+    </ul>
+  <% end %>
+  <div class="act-btn">
+    <%= link_to new_category_bill_path(category_id: @category.id), class: "btn big-btn" do %>
+      Add new bill
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<%= render partial: 'shared/header', locals: { heading: 'ADD NEW BILL', path: category_path(@category) } %>
+<%= form_with model: @bill, url: category_bills_path, local: true do |f| %>
+  <%= f.text_field :name, autofocus: true, autocomplete: "off", placeholder: "Name", class: "input-field" %>
+  <%= f.number_field :amount, autofocus: false, autocomplete: "off", placeholder: "Amount", class: "input-field" %>
+  <div class="check-container">
+    <%= f.label :category_ids, "Select one or more categories:" %>
+    <div class="check-buttons">
+      <%= f.collection_check_boxes :category_ids, current_user.categories, :id, :name do |b| %>
+        <div>
+          <%= b.check_box %>
+          <%= b.label %>
+        </div>
+      <% end %>
+    </div>
+    <%= f.submit "Add Bill", class: "btn landings-login" %>
+  </div>
+<% end %>
